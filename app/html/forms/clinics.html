@@ -28,8 +28,31 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <i class="fa fa-exclamation-circle text-danger fa-5x"></i>
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter by</span> <span class="caret"></span> </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">Clinic Name</a></li>
+                                    <li><a href="#its_equal">Address</a></li>
+                                    <li><a href="#greather_than">Tax Number</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#less_than">Contact Person Name</a></li>
+                                    <li><a href="#less_than">Contact Person Number</a></li>                                                                        
+                                </ul>
+                            </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="text" class="form-control" name="x" placeholder="Search term..."> <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search gmail-red"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">Table</div>
         </div>
     </div>
     <!-- /container -->
@@ -38,15 +61,13 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../../../bootstrap/js/bootstrap.min.js"></script>
     <!--<script src="../../../app/js/app.js"></script>-->
+    <!-- footer -->
     <div class="rightplus">
-      <div class="row">
-            <div class="col-md-12">
-                <i class="fa fa-user-plus fa-5x text-danger" aria-hidden="true" ></i>
-            </div>
+        <div class="row">
+            <div class="col-md-12"> <i class="fa fa-plus-circle fa-5x gmail-red" aria-hidden="true"></i> </div>
+        </div>
     </div>
-    </div>
-    
-    
+    <!-- footer -->
 </body>
 
 </html>

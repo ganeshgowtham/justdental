@@ -245,6 +245,10 @@ form.login a:hover {
     right: 0;
 }
 
+.gmail-red {
+    color: #08afed;
+}
+
 .rightplus {
     position: fixed;
     right: 0;
