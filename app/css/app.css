@@ -1,17 +1,15 @@
-.login-background
-{
-    background: url('http://matchthemes.com/demohtml/dentalclinic/images/home/slider-2.jpg')  no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.login-background {
+    background: url('http://matchthemes.com/demohtml/dentalclinic/images/home/slider-2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 
-.wrap
-{
+.wrap {
     width: 100%;
     height: 100%;
     min-height: 100%;
@@ -20,30 +18,28 @@
     left: 0;
     z-index: 99;
 }
-aws-orange-color
-{
-    color: coral;            
+
+aws-orange-color {
+    color: coral;
 }
-p.form-title
-{
-    font-family: 'Open Sans' , sans-serif;
+
+p.form-title {
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     text-align: center;
     color: #5cb85c;
-    margin-top: 5%;    
-    
+    margin-top: 5%;
     font-style: italic;
 }
 
-form
-{
+form {
     width: 300px;
     margin: 0 auto;
 }
 
-form.login input[type="text"], form.login input[type="password"]
-{
+form.login input[type="text"],
+form.login input[type="password"] {
     width: 100%;
     margin: 0;
     padding: 5px 10px;
@@ -55,13 +51,11 @@ form.login input[type="text"], form.login input[type="password"]
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
     outline: 0;
-    
 }
 
-form.login input[type="submit"]
-{
+form.login input[type="submit"] {
     width: 100%;
     font-size: 14px;
     text-transform: uppercase;
@@ -73,42 +67,38 @@ form.login input[type="submit"]
     border-radius: 25px;
 }
 
-form.login input[type="submit"]:hover
-{
+form.login input[type="submit"]:hover {
     transition: background-color 0.5s ease;
 }
 
-form.login .remember-forgot
-{
+form.login .remember-forgot {
     float: left;
     width: 100%;
     margin: 10px 0 0 0;
 }
-form.login .forgot-pass-content
-{
+
+form.login .forgot-pass-content {
     min-height: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-form.login label, form.login a
-{
+
+form.login label,
+form.login a {
     font-size: 12px;
     font-weight: 400;
     color: 5cb85c;
 }
 
-form.login a
-{
+form.login a {
     transition: color 0.5s ease;
 }
 
-form.login a:hover
-{
+form.login a:hover {
     color: #2ecc71;
 }
 
-.pr-wrap
-{
+.pr-wrap {
     width: 100%;
     height: 100%;
     min-height: 100%;
@@ -119,13 +109,11 @@ form.login a:hover
     display: none;
 }
 
-.show-pass-reset
-{
+.show-pass-reset {
     display: block !important;
 }
 
-.pass-reset
-{
+.pass-reset {
     margin: 0 auto;
     width: 250px;
     position: relative;
@@ -135,15 +123,13 @@ form.login a:hover
     padding: 20px 15px;
 }
 
-.pass-reset label
-{
+.pass-reset label {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 15px;
 }
 
-.pass-reset input[type="email"]
-{
+.pass-reset input[type="email"] {
     width: 100%;
     margin: 5px 0 0 0;
     padding: 5px 10px;
@@ -160,8 +146,7 @@ form.login a:hover
     outline: 0;
 }
 
-.pass-reset input[type="submit"]
-{
+.pass-reset input[type="submit"] {
     width: 100%;
     border: 0;
     font-size: 14px;
@@ -174,68 +159,96 @@ form.login a:hover
     border-radius: 25px;
 }
 
-.pass-reset input[type="submit"]:hover
-{
+.pass-reset input[type="submit"]:hover {
     transition: background-color 0.5s ease;
 }
 
 .panel-yellow {
-  border-color: #f0ad4e;
+    border-color: #f0ad4e;
 }
+
 .panel-yellow > .panel-heading {
-  border-color: #f0ad4e;
-  color: white;
-  background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: white;
+    background-color: #f0ad4e;
 }
+
 .panel-yellow > a {
-  color: #f0ad4e;
+    color: #f0ad4e;
 }
+
 .panel-yellow > a:hover {
-  color: #df8a13;
+    color: #df8a13;
 }
 
 .huge {
-  font-size: 40px;
+    font-size: 40px;
 }
+
 .panel-green {
-  border-color: #5cb85c;
+    border-color: #5cb85c;
 }
+
 .panel-green > .panel-heading {
-  border-color: #5cb85c;
-  color: white;
-  background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: white;
+    background-color: #5cb85c;
 }
+
 .panel-green > a {
-  color: #5cb85c;
+    color: #5cb85c;
 }
+
 .panel-green > a:hover {
-  color: #3d8b3d;
+    color: #3d8b3d;
 }
+
 .panel-red {
-  border-color: #d9534f;
+    border-color: #d9534f;
 }
+
 .panel-red > .panel-heading {
-  border-color: #d9534f;
-  color: white;
-  background-color: #d9534f;
+    border-color: #d9534f;
+    color: white;
+    background-color: #d9534f;
 }
+
 .panel-red > a {
-  color: #d9534f;
+    color: #d9534f;
 }
+
 .panel-red > a:hover {
-  color: #b52b27;
+    color: #b52b27;
 }
+
 .panel-yellow {
-  border-color: #f0ad4e;
+    border-color: #f0ad4e;
 }
+
 .panel-yellow > .panel-heading {
-  border-color: #f0ad4e;
-  color: white;
-  background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: white;
+    background-color: #f0ad4e;
 }
+
 .panel-yellow > a {
-  color: #f0ad4e;
+    color: #f0ad4e;
 }
+
 .panel-yellow > a:hover {
-  color: #df8a13;
+    color: #df8a13;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.rightplus {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 26px;
+   
 }
