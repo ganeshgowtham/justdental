@@ -245,7 +245,7 @@ form.login a:hover {
     right: 0;
 }
 
-.gmail-red {
+.add-plus {
     color: #08afed;
 }
 
@@ -255,4 +255,46 @@ form.login a:hover {
     bottom: 0;
     padding: 26px;
    
+}
+
+.modal{
+    width: :900px
+}
+.modal-dialog,
+.modal-content {
+    /* 80% of window height */
+  
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+    
+    overflow-y: scroll;
+}
+.bottom-padding-5per{
+    padding: 1%;
+}
+
+.modal-wdith-35per{
+    width: :65%;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;  
+  line-height: inherit;
+  color: @legend-color;
+  border: 0;
+  border-bottom: 1px solid @legend-border-color;
+    margin-bottom: 5px;
+    font-size:inherit;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #337ab7;
+}
+.form-group {
+  margin-bottom: 2px;
+    padding: 5px;
 }

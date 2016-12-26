@@ -15,7 +15,27 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../../app/css/app.css" rel="stylesheet">
     <link href="../../../app/css/highcharts.css" rel="stylesheet">
-    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet"> </head>
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 75%;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 950px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+</head>
 
 <body>
     <nav class="navbar navbar-default">
@@ -34,45 +54,147 @@
                             <div class="input-group-btn search-panel">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter by</span> <span class="caret"></span> </button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#contains"><i class="fa fa-html5 fa-1x"></i>     Clinic Name</a></li>
-                                    <li><a href="#its_equal"><i class="fa fa-html5 fa-1x"></i>     Address</a></li>
-                                    <li><a href="#greather_than"><i class="fa fa-html5 fa-1x"></i>     Tax Number</a></li>
+                                    <li><a href="#contains"><i class="fa fa-building fa-1x"></i>     Clinic Name</a></li>
+                                    <li><a href="#its_equal"><i class="fa fa-map-marker fa-1x"></i>     Address</a></li>
+                                    <li><a href="#greather_than"><i class="fa fa-list-ol fa-1x"></i>     Tax Number</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#less_than"><i class="fa fa-html5 fa-1x"></i>     Contact Person Name</a></li>
-                                    <li><a href="#less_than"><i class="fa fa-html5 fa-1x"></i>     Contact Person Number</a></li>                                                                        
+                                    <li><a href="#less_than"><i class="fa fa-user fa-1x"></i>     Contact Person Name</a></li>
+                                    <li><a href="#less_than"><i class="fa fa-mobile fa-1x"></i>     Contact Person Number</a></li>
                                 </ul>
                             </div>
                             <input type="hidden" name="search_param" value="all" id="search_param">
                             <input type="text" class="form-control" name="x" placeholder="Search term..."> <span class="input-group-btn">
-                    <i  class="fa fa-search gmail-red"></i></button>
-                            </span>
-                        </div>
+                                <i  class="fa fa-search add-plus"></i>
+                            </span> </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12"table</div>
+            <div class="col-md-12"> table</div>
+            <div id="addClinicModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content" style='width:90%'>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"> Register Clinic</h4> </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group bottom-padding-5per">
+                                    <div class="col-md-10">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-building fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Clinic name"> </div>
+                                    </div>
+                                    <div class="col-md-2">&nbsp;</div>
+                                </div>
+                            </div>
+                            <!-- Tax Number -->
+                            <div class="row">
+                                <div class="form-group  bottom-padding-5per">
+                                    <div class="col-md-10">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-list-ol fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Tax number"> </div>
+                                    </div>
+                                    <div class="col-md-2">&nbsp;</div>
+                                </div>
+                            </div>
+                            <!-- Tax Number -->
+                            <legend>Contact Information</legend>
+                            <div class="row">
+                                <div class="form-group  bottom-padding-5per">
+                                    <div class="col-md-6">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Clinic admin name"> </div>
+                                    </div>
+                                    <div class="col-md-1">&nbsp;</div>
+                                    <div class="col-md-5">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-mobile fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Clinic admin number"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <legend>Address Details</legend>
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-road fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Street # 1"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-road fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Street # 2"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Locality"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                               <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="City"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="State"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Country"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Pincode"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row  pull-right">
+                                <div class="form-group">                                    
+                                    <div class="col-md-12">                                        
+                                            <button class="btn btn-danger btn-md"><i class="fa fa-remove"></i> Cancel</button>
+                                        <button class="btn btn-success btn-md"><i class="fa fa-save"></i> Submit</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
     </div>
     <!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -83,7 +205,7 @@
     <!-- footer -->
     <div class="rightplus">
         <div class="row">
-            <div class="col-md-12"> <i data-toggle="modal" data-target="#myModal" class="fa fa-plus-circle fa-5x gmail-red" aria-hidden="true"></i> </div>
+            <div class="col-md-12"> <i data-toggle="modal" data-target="#addClinicModal" class="fa fa-plus-circle fa-5x add-plus" aria-hidden="true"></i> </div>
         </div>
     </div>
     <!-- footer -->
