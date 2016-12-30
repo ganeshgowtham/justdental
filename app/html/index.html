@@ -14,7 +14,27 @@
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../css/app.css" rel="stylesheet">
-    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet"> </head>
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 25%;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 950px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+</head>
 
 <body>
     <div class="navbar-wrapper">
@@ -36,7 +56,7 @@
                                     <li><a href="#">Contant us</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="#">Login</a></li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href="">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,44 +65,27 @@
     </div>
     <!-- ================ INICIA FORMULARIO DE LOGIN ============================================================== -->
     <div class="container">
-        <div class="row" style="margin-top:60px">
-        </div>
+        <div class="row" style="margin-top:60px"> </div>
         <section class="clearfix linkSection sectionLinkPadding">
-      <div class="sectionLinkArea scrolling">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-3">
-              <a href="#ourCourses" class="sectionLink bg-color-1" id="coursesLink">
-                <i class="fa fa-file-text-o linkIcon border-color-1" aria-hidden="true"></i>
-                <span class="linkText">Services</span>
-                <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
-              </a>
+            <div class="sectionLinkArea scrolling">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="#ourCourses" class="sectionLink bg-color-1" id="coursesLink"> <i class="fa fa-tasks linkIcon border-color-1" aria-hidden="true"></i> <span class="linkText">Services</span> <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i> </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#ourTeam" class="sectionLink bg-color-2" id="teamLink"> <i class="fa fa-calendar-o linkIcon border-color-2" aria-hidden="true"></i> <span class="linkText">Our Offerings</span> <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i> </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#ourGallery" class="sectionLink bg-color-3" id="galleryLink"> <i class="fa fa-picture-o linkIcon border-color-3" aria-hidden="true"></i> <span class="linkText">Gallery</span> <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i> </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#latestNews" class="sectionLink bg-color-4" id="newsLink"> <i class="fa fa-newspaper-o linkIcon border-color-4" aria-hidden="true"></i> <span class="linkText">News</span> <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i> </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-3">
-              <a href="#ourTeam" class="sectionLink bg-color-2" id="teamLink">
-                <i class="fa fa-calendar-o linkIcon border-color-2" aria-hidden="true"></i>
-                <span class="linkText">Our Offerings</span>
-                <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="col-sm-3">
-              <a href="#ourGallery" class="sectionLink bg-color-3" id="galleryLink">
-                <i class="fa fa-picture-o linkIcon border-color-3" aria-hidden="true"></i>
-                <span class="linkText">Gallery</span>
-                <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="col-sm-3">
-              <a href="#latestNews" class="sectionLink bg-color-4" id="newsLink">
-                <i class="fa fa-files-o linkIcon border-color-4" aria-hidden="true"></i>
-                <span class="linkText">News</span>
-                <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
         <div class="sectionTitle text-center">
             <h2>
             <span class="shape shape-left bg-color-4"></span>
@@ -92,7 +95,7 @@
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-1">
-                <i class="fa fa-graduation-cap bg-color-1" aria-hidden="true"></i>
+                <i class="fa fa-stethoscope bg-color-1" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
                         <h3 class="media-heading color-1">Experience Dentists</h3>
@@ -102,17 +105,17 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-2">
-                <i class="fa fa-leaf bg-color-2" aria-hidden="true"></i>
+                <i class="fa fa-truck bg-color-2" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
-                        <h3 class="media-heading color-2">Inventory Management</h3>
+                        <h3 class="media-heading color-2">Clinicals Supply</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-3">
-                <i class="fa fa-car bg-color-3" aria-hidden="true"></i>
+                <i class="fa fa-tasks bg-color-3" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
                         <h3 class="media-heading color-3">Appointments</h3>
@@ -122,7 +125,7 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-4">
-                <i class="fa fa-cutlery bg-color-4" aria-hidden="true"></i>
+                <i class="fa fa-inr bg-color-4" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
                         <h3 class="media-heading color-4">Billing &amp; Invoice</h3>
@@ -132,7 +135,7 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-5">
-                <i class="fa fa-heart bg-color-5" aria-hidden="true"></i>
+                <i class="fa fa-users bg-color-5" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
                         <h3 class="media-heading color-5">Premier Support</h3>
@@ -142,11 +145,60 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <div class="media featuresContent"> <span class="media-left bg-color-6">
-                <i class="fa fa-shield bg-color-6" aria-hidden="true"></i>
+                <i class="fa fa-calendar-o bg-color-6" aria-hidden="true"></i>
               </span>
                     <div class="media-body">
                         <h3 class="media-heading color-6">Our Offerings</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addClinicModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content" style='width:90%'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-primary"> Just Dental Login</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group bottom-padding-5per">
+                            <div class="col-md-12">
+                                <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-building fa-fw text-primary"></i>
+                                            </span>
+                                    <input class="form-control" type="text" placeholder="Username"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group bottom-padding-5per">
+                            <div class="col-md-12">
+                                <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-key fa-fw text-primary"></i>
+                                            </span>
+                                    <input class="form-control" type="password" placeholder="Password"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  top5">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button class="btn btn-success btn-block"><i class="fa fa-user"></i> Login</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  top5">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <a href="#">Create account</a>  
+                            </div>
+                            <div class="col-md-6">
+                               <a href="#">Forgot password</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
