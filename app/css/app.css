@@ -575,6 +575,7 @@ border: none;
 .bg-color-7 {
     background-color: #2f3c43;
 }
+
 .linkIcon,.locateArrow {
     display: block;
     position: absolute;
@@ -698,4 +699,9 @@ border: none;
 .sectionLinkPadding{
     padding-top: 170px;
     padding-bottom: 30px;
+}
+
+.color-white
+{
+    color: white;
 }

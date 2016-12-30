@@ -52,4 +52,88 @@ $(function () {
             , data: [17, 26, 29, 34, 48, 51, 35, 56, 53, 78, 103, 110]
         }]
     });
+    
+    Highcharts.chart('appointmentChart', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Appointments'
+        },        
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'appointments',
+            data: [
+                ['Consulted', 90],
+                ['Cancelled', 10]
+            ]
+        }]
+    });
+    
+    Highcharts.chart('patientChart', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Patient details'
+        },        
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'patient(s)',
+            data: [
+                ['New', 90],
+                ['Already registered', 10]
+            ]
+        }]
+    });
+    
+    
+   
+    
+    Highcharts.chart('doctorChart', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Specialization'
+        },        
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'specialist',
+            data: [
+                ['Dentist', 35],
+                ['Prosthodontist', 20],
+                ['Orthodontist', 10],
+                ['Endodontist', 20],
+                ['Implantologist', 10]
+            ]
+        }]
+    });
 });
