@@ -299,7 +299,8 @@ legend {
     padding: 5px;
 }
 .top5 { margin-top:5px; }
-.padding-top75 { padding-top:75px; }
+.padding-top100 { padding-top:100px; }
+.padding-top50 { padding-top:50px; }
 #custom-search-input{
     padding: 3px;
     border: solid 1px #E4E4E4;
