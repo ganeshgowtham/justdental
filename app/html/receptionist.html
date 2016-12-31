@@ -15,7 +15,17 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../app/css/app.css" rel="stylesheet">
     <link href="../../app/css/highcharts.css" rel="stylesheet">
-    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet"> </head>
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+		<link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+		<link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+
+			<script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+	<script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>
+</head>
 
 <body>
     <div class="navbar-wrapper">
@@ -31,13 +41,28 @@
                             <li class="active"><a href="#" class="">JUST DENTAL </a></li>
                         </ul>
                         <ul class="nav navbar-nav pull-right">
-                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>   Appointments<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Contant us</a></li>
+                                    <li><a href="#">Book</a></li>
+                                    <li><a href="#">Manage</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Guest</a></li>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wheelchair">   </i>   Patient<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="#">Manage Patients</a></li>
+                                    <li><a href="#">Diagonis</a></li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>       Doctor<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Register doctor</a></li>
+                                    <li><a href="#">Manage doctor's calendar</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-inr">   </i>   Revenue</a></li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Clinical Supply</a></li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Sudhidhra Samaga</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,10 +70,10 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row padding-top75">
             <div class="col-md-12">
                 <div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <i class="fa fa-exclamation-circle text-danger"></i> <strong>Warning!</strong> License for four clinics are about to expire. </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <i class="fa fa-info-circle text-primary"></i> Notification : Welcome Sudhindra Samaga, Have a good day. </div>
             </div>
         </div>
         <div class="row">
@@ -56,10 +81,10 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-bed fa-5x"></i> </div>
+                            <div class="col-xs-3"> <i class="fa fa-calendar fa-5x"></i> </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">50</div>
-                                <div>Total Clinics</div>
+                                <div>Total appointments</div>
                             </div>
                         </div>
                     </div>
@@ -77,7 +102,7 @@
                             <div class="col-xs-3"> <i class="fa fa-user-md fa-5x"></i> </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">100</div>
-                                <div>Doctors</div>
+                                <div>Doctors presence</div>
                             </div>
                         </div>
                     </div>
@@ -92,10 +117,10 @@
                 <div class="panel panel-yellow">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-users fa-5x"></i> </div>
+                            <div class="col-xs-3"> <i class="fa fa-wheelchair fa-5x"></i> </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">124</div>
-                                <div>Meeting with Clients</div>
+                                <div>Registered patients</div>
                             </div>
                         </div>
                     </div>
@@ -113,7 +138,7 @@
                             <div class="col-xs-3"> <i class="fa fa-inr fa-5x"></i> </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge">5</div>
-                                <div>Clinics payment due</div>
+                                <div>Todays earnings</div>
                             </div>
                         </div>
                     </div>
@@ -125,67 +150,36 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4"><div id="appointmentChart" style="width:100%; height:300px;"></div></div>
-            <div class="col-md-4"><div id="patientChart" style="width:100%; height:300px;"></div></div>
-            <div class="col-md-4"><div id="doctorChart" style="width:100%; height:300px;"></div></div>
-        </div>
-        <div class="row">
+        <div class="row padding-top75">
             <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading"> <i class="fa fa-bell fa-fw"></i> Data insight </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div id="container" style="width:100%; height:400px;"></div>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
+                <div id='calendar'></div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading"> <i class="fa fa-bell fa-fw"></i> Shortcuts </div>
+                    <div class="panel-heading"> <i class="fa fa-bell fa-fw"></i> Reminders </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="list-group">
-                            <a href="#" class="list-group-item"> <i class="fa fa-file fa-fw"></i> Detailed Reports <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                            <a href="#" class="list-group-item"> <i class="fa fa-file fa-fw"></i> Doctors in leave <span class="pull-right text-muted small"><div class="label label-table label-danger">3</div>
                                     </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-twitter fa-fw"></i> 3 New Followers <span class="pull-right text-muted small"><em>12 minutes ago</em>
+                            <a href="#" class="list-group-item"> <i class="fa fa-twitter fa-fw"></i>X ray reports from lab<span class="pull-right text-muted small"><div class="label label-table label-info">In transit</div>
                                     </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-envelope fa-fw"></i> Message Sent <span class="pull-right text-muted small"><em>27 minutes ago</em>
+                            <a href="#" class="list-group-item"> <i class="fa fa-tasks fa-fw"></i>Clinical supply - out of stock <span class="pull-right text-muted small"><div class="label label-table label-warning">10/Feb/2017</div>
                                     </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-tasks fa-fw"></i> New Task <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-upload fa-fw"></i> Server Rebooted <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-bolt fa-fw"></i> Server Crashed! <span class="pull-right text-muted small"><em>11:13 AM</em>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-warning fa-fw"></i> Server Not Responding <span class="pull-right text-muted small"><em>10:57 AM</em>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-shopping-cart fa-fw"></i> New Order Placed <span class="pull-right text-muted small"><em>9:49 AM</em>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-money fa-fw"></i> Payment Received <span class="pull-right text-muted small"><em>Yesterday</em>
+                            <a href="#" class="list-group-item"> <i class="fa fa-upload fa-fw"></i>Next day appointments <span class="pull-right text-muted small"><div class="label label-table label-primary">23</div>
                                     </span> </a>
                         </div>
-                        <!-- /.list-group --><a href="#" class="btn btn-default btn-block">View All Alerts</a> </div>
+                        <!-- /.list-group --><a href="#" class="btn btn-default btn-block">View All Reminders</a> </div>
                     <!-- /.panel-body -->
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">Panel heading</div>
-                    <!-- Table -->
-                    <table class="table"> ... </table>
-                </div>
-            </div>
-        </div>
+        
     </div>
     <!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
     <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
     <script src="../../app/js/app.js"></script>
