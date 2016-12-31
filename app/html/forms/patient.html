@@ -30,8 +30,7 @@
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
-            a = s.createElement(o)
-                , m = s.getElementsByTagName(o)[0];
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
@@ -39,6 +38,25 @@
         ga('create', 'UA-89613573-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <style type="text/css">
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 75%;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 950px;
+                /* New width for large modal */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,7 +66,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <a class="navbar-brand" href="#"><img alt="Brand" src="../../app/images/logo.png"></a>
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="../../../app/images/logo.png"></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -85,110 +103,231 @@
     </div>
     <div class="container">
         <div class="row padding-top100">
-            <div class="col-md-12">
-                <div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <i class="fa fa-info-circle text-primary"></i> Notification : Welcome Sudhindra Samaga, Have a good day. </div>
-            </div>
+            <div class="col-md-12"> </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-calendar fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">50</div>
-                                <div>Total appointments</div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8 col-xs-offset-2">
+                        <div class="input-group">
+                            <div class="input-group-btn search-panel">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter by</span> <span class="caret"></span> </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#its_equal"><i class="fa fa-map-marker fa-1x"></i>     Patient Id</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#less_than"><i class="fa fa-user fa-1x"></i>     Patient Name</a></li>
+                                    <li><a href="#less_than"><i class="fa fa-mobile fa-1x"></i>    Patient Number</a></li>
+                                </ul>
                             </div>
-                        </div>
+                            <input type="hidden" name="search_param" value="all" id="search_param">
+                            <input type="text" class="form-control text-round" name="x" placeholder="Search term..."> <span class="input-group-btn">
+                                <i  class="fa fa-search add-plus"></i>
+                            </span> </div>
                     </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-green">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-user-md fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">100</div>
-                                <div>Doctors presence</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-yellow">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-wheelchair fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
-                                <div>Registered patients</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-red">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-inr fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">5</div>
-                                <div>Todays earnings</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
-        <div class="row padding-top50">
+        <div class="row  padding-top100">
             <div class="col-md-12">
-                <div id='calendar'></div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Patient Id</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Phone number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Default</td>
+                            <td>Defaultson</td>
+                            <td>def@somemail.com</td>
+                            <td>9886646691</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Success</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td>9886646692</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Danger</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                            <td>9886646693</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Info</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                            <td>9886646694</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Warning</td>
+                            <td>Refs</td>
+                            <td>bo@example.com</td>
+                            <td>9886646695</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Active</td>
+                            <td>Activeson</td>
+                            <td>act@example.com</td>
+                            <td>9886646696</td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-        <div class="row padding-top50">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading"> <i class="fa fa-bell fa-fw"></i> Reminders </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item"> <i class="fa fa-file fa-fw"></i> Doctors in leave <span class="pull-right text-muted small"><div class="label label-table label-danger">3</div>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-twitter fa-fw"></i>X ray reports from lab<span class="pull-right text-muted small"><div class="label label-table label-info">In transit</div>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-tasks fa-fw"></i>Clinical supply - out of stock <span class="pull-right text-muted small"><div class="label label-table label-warning">10/Feb/2017</div>
-                                    </span> </a>
-                            <a href="#" class="list-group-item"> <i class="fa fa-upload fa-fw"></i>Next day appointments <span class="pull-right text-muted small"><div class="label label-table label-primary">23</div>
-                                    </span> </a>
+            <div id="addClinicModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content" style='width:90%'>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"> Register Patient</h4> </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group bottom-padding-5per">
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="First name"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Middle name"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Last name"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group bottom-padding-5per">
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-venus-mars fa-fw text-primary"></i>
+                                            </span>
+                                            <div class="form-group">
+                                                <select class="form-control" id="sel1">
+                                                    <option>Gender</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-calendar fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Date of birth"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-mobile fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Phone number"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tax Number -->
+                            <div class="row">
+                                <div class="form-group bottom-padding-5per">
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-venus-mars fa-fw text-primary"></i>
+                                            </span>
+                                            <div class="form-group">
+                                                <select class="form-control" id="sel1">
+                                                    <option>Marital status</option>
+                                                    <option>Single</option>
+                                                    <option>Married</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-heartbeat fa-fw text-primary"></i>
+                                            </span>
+                                            <div class="form-group">
+                                                <select class="form-control" id="sel1">
+                                                    <option>Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-envelope fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="email"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="State"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Country"> </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                            <input class="form-control" type="text" placeholder="Pincode"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row  pull-right top5">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-danger btn-md"><i class="fa fa-remove"></i> Cancel</button>
+                                        <button class="btn btn-success btn-md"><i class="fa fa-save"></i> Create patient</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- /.list-group --><a href="#" class="btn btn-default btn-block">View All Reminders</a> </div>
-                    <!-- /.panel-body -->
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="rightplus">
+        <div class="row">
+            <div class="col-md-12"> <i data-toggle="modal" data-target="#addClinicModal" class="fa fa-plus-circle fa-4x add-plus" aria-hidden="true"></i> </div>
         </div>
     </div>
     <!-- /container -->
