@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Just Dental</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../app/css/app.css" rel="stylesheet">
+    <link href="../../../app/css/highcharts.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css' />
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+    <script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89613573-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <style type="text/css">
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 75%;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 950px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="../../../app/images/logo.png"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#" class="">JUST DENTAL </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>   Appointments<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Book</a></li>
+                                    <li><a href="#">Manage</a></li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wheelchair">   </i>   Patient<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Registration</a></li>
+                                    <li><a href="#">Manage Patients</a></li>
+                                    <li><a href="#">Diagonis</a></li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>       Doctor<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Register doctor</a></li>
+                                    <li><a href="#">Manage doctor's calendar</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-inr">   </i>   Revenue</a></li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Clinical Supply</a></li>
+                            <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Guest</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid padding-25">
+        <div class="row padding-top100">
+            <div class="col-md-12"> </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-md-2"> <img src="../../../app/images/santhosh.jpg" alt="" class="img-rounded img-responsive" /> </div>
+            <div class="col-sm-4 col-md-4"> </div>
+            <div class="col-md-1"> </div>
+            <div class="col-sm-4 col-md-9">
+                <blockquote>
+                    <p>Mr. Santhosh Kumar</p>
+                    <small>
+                        <cite title="Source Title">35 / Male - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite>
+                    </small> 
+                </blockquote>
+                <address class="no-margin">
+                        Behind Canara bank <br>
+                        Ramamandir, 3rd block Rajajinagar <br>
+                        Bangalore <br>
+                        <abbr title="email">E-mail:</abbr>
+                        <a href="mailto:#" data-original-title="" title="">drsantoshkumarr@gmail.com</a><br> 
+                        <abbr title="Phone">Phone:</abbr>+91 7892317589<br>																
+				</address>
+            </div>
+        </div>
+        <div class="row padding-top50">
+            <div class="col-sm-3 col-md-3">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-inr">   </i>   Profile</a>
+                        </h4> </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td> <i class="fa fa-user"><a href="http://www.jquery2dotnet.com">  Basic Information</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-map-marker"><a href="http://www.jquery2dotnet.com">  Address</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-file"><a href="http://www.jquery2dotnet.com">   Personal Records</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
+                            </span>Appointments</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Upcoming</a> <span class="label label-success">$ 320</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">All</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user">
+                            </span>Health Records</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Reports</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Bills</a> <span class="label label-info">5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Prescription</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
+                                            Doctor's Notes</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-9">
+            <div class="well">                
+                Appointments
+            </div>
+            <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sno #</th>
+                            <th>Description</th>
+                            <th>Consulting Doctor</th>
+                            <th>Clinic Name</th>
+                            <th>Date</th>                            
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>RC - #1</td>
+                            <td>Dr Sumanth</td>
+                            <td>Rukmini Clinic</td>
+                            <td><span class="label label-default">20/Jan/2017</span></td>
+                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>RC - #2</td>
+                                        <td>Dr Sumanth</td>
+                                        <td>Rukmini Clinic</td>
+                                        <td><span class="label label-default">20/Jan/2017</span></td>
+                                        <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>RC - #3</td>
+                                        <td>Dr Sumanth</td>
+                                        <td>Rukmini Clinic</td>
+                                        <td><span class="label label-default">21/Jan/2017</span></td>
+                                        <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Crown Measurement</td>
+                                        <td>Dr Suresh</td>
+                                        <td>Rukmini Clinic</td>
+                                        <td><span class="label label-warning">24/Jan/2017</span></td>
+                                        <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Crown Fitting</td>
+                                        <td>Dr Suresh</td>
+                                        <td>Rukmini Clinic</td>
+                                        <td><span class="label label-success">28/Jan/2017</span></td>
+                                        <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Crown Fitting</td>
+                                        <td>Dr Suresh</td>
+                                        <td>Rukmini Clinic</td>
+                                        <td><span class="label label-success">28/Jan/2017</span></td>
+                                        <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-xs-offset-2">
+                                <div class="input-group">
+                                    <div class="input-group-btn search-panel">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span id="search_concept">Filter by</span> <span class="caret"></span> </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#its_equal"><i class="fa fa-map-marker fa-1x"></i>     Patient Id</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#less_than"><i class="fa fa-user fa-1x"></i>     Patient Name</a></li>
+                                            <li><a href="#less_than"><i class="fa fa-mobile fa-1x"></i>    Patient Number</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="hidden" name="search_param" value="all" id="search_param">
+                                    <input type="text" class="form-control text-round" name="x" placeholder="Search term..."> <span class="input-group-btn">
+                                <i  class="fa fa-search add-plus"></i>
+                            </span> </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table id="example" class="display" width="100%"></table>
+                            </div>
+                        </div>
+                        <div class="row  padding-top100">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Patient Id</th>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Email</th>
+                                            <th>Phone number</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Default</td>
+                                            <td>Defaultson</td>
+                                            <td>def@somemail.com</td>
+                                            <td>9886646691</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Success</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>9886646692</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Danger</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>9886646693</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Info</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>9886646694</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Warning</td>
+                                            <td>Refs</td>
+                                            <td>bo@example.com</td>
+                                            <td>9886646695</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Active</td>
+                                            <td>Activeson</td>
+                                            <td>act@example.com</td>
+                                            <td>9886646696</td>
+                                            <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="addClinicModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content" style='width:90%'>
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title"> Register Patient</h4> </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="form-group bottom-padding-5per">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="First name"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Middle name"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-user fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Last name"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group bottom-padding-5per">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-venus-mars fa-fw text-primary"></i>
+                                            </span>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="sel1">
+                                                                    <option>Gender</option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-calendar fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Date of birth"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-mobile fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Phone number"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tax Number -->
+                                            <div class="row">
+                                                <div class="form-group bottom-padding-5per">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-venus-mars fa-fw text-primary"></i>
+                                            </span>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="sel1">
+                                                                    <option>Marital status</option>
+                                                                    <option>Single</option>
+                                                                    <option>Married</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-heartbeat fa-fw text-primary"></i>
+                                            </span>
+                                                            <div class="form-group">
+                                                                <select class="form-control" id="sel1">
+                                                                    <option>Blood group</option>
+                                                                    <option>A+</option>
+                                                                    <option>A-</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-envelope fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="email"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="State"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Country"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                <i class="fa fa-map-marker fa-fw text-primary"></i>
+                                            </span>
+                                                            <input class="form-control" type="text" placeholder="Pincode"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row  pull-right top5">
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-danger btn-md"><i class="fa fa-remove"></i> Cancel</button>
+                                                        <button class="btn btn-success btn-md"><i class="fa fa-save"></i> Create patient</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /container -->
+                    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+                    <script src="../../../app/js/app.js"></script>
+                    <script src="../../../app/js/data.js"></script>
+                    <script src="../../../app/js/highcharts.js"></script>
+                    <script src="../../../app/js/exporting.js"></script>
+</body>
+
+</html>
