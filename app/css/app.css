@@ -1173,9 +1173,9 @@ fieldset[disabled] .btn-facebook.focus {
 .quick-btn {
   position: relative;
   display: inline-block;
-  width: 90px;
-  height: 80px;
-  padding-top: 16px;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
   margin: 10px;
   color: #444444;
   text-align: center;
@@ -1186,8 +1186,8 @@ fieldset[disabled] .btn-facebook.focus {
 }
 .quick-btn .label {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -10px;
+  right: -10px;
 }
 
 .btn-metis-4 {
