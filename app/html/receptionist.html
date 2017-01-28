@@ -82,86 +82,159 @@
             </nav>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row padding-top100">
             <div class="col-md-3">
-                <div>
-                    <a class="quick-btn" href="#"> <i class="fa fa-sign-in text-success"></i>
-                        <br/> <span class="label label-success">2</span> </a>
-                    <a class="quick-btn" href="#"> <i class="fa fa-angellist text-warning"></i>
-                        <br/> <span class="label label-warning">4</span> </a>
-                    <a class="quick-btn" href="#"> <i class="fa fa-sign-out text-danger"></i>
-                        <br/> <span class="label label-danger">7</span> </a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="quick-btn" href="#"> <i class="fa fa-sign-in text-success"></i>
+                            <br/> <span class="label label-success">2</span> </a>
+                        <a class="quick-btn" href="#"> <i class="fa fa-angellist text-warning"></i>
+                            <br/> <span class="label label-warning">4</span> </a>
+                        <a class="quick-btn" href="#"> <i class="fa fa-sign-out text-danger"></i>
+                            <br/> <span class="label label-danger">7</span> </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="alert alert-warning alert-dismissile" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <i class="fa fa-info-circle text-primary"></i> Notification : Welcome Guest, Have a good day. </div>
-            </div>
-            <div class="col-md-3">
-                <button class="btn btn-success btn-md  btn-round"> <i class="fa fa-calendar"></i> Book Appointment </button>
-                <button class="btn btn-success btn-md  btn-round"> <i class="fa fa-inr"></i> Billing </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-calendar fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">50</div>
-                                <div>Total appointments</div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-user">   </i>         My work</a>
+                        </h4> </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <td> <i class="fa fa-user-md"><a href="http://www.jquery2dotnet.com">  Doctor's I support</a>
+                                            </i></td>
+                                            </tr>
+                                            <tr>
+                                                <td> <i class="fa fa-calendar"><a href="http://www.jquery2dotnet.com">      Manage doctor's calendar</a>
+                                    </i></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
+                            </span>Appointments</a>
+                        </h4> </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Book</a> <span class="label label-success">Book</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Cancel</a> </td>
+                                            </tr>
+                                             <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Activate</a> </td>
+                                            </tr>
+                                             <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Clone</a> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user">
+                            </span>Patient</a>
+                        </h4> </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table">
+                                            <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Reports</a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Bills</a> <span class="label label-info">5</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <a href="http://www.jquery2dotnet.com">Prescription</a> </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
+                                            Doctor's Notes</a> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-green">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-user-md fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">100</div>
-                                <div>Doctors presence</div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3"> <i class="fa fa-calendar fa-5x"></i> </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">50</div>
+                                        <div>Total appointments</div>
+                                    </div>
+                                </div>
                             </div>
+                            <a href="#">
+                                <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-yellow">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3"> <i class="fa fa-wheelchair fa-5x"></i> </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
-                                <div>Registered patients</div>
+                    <div class="col-md-4">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3"> <i class="fa fa-user-md fa-5x"></i> </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">100</div>
+                                        <div>Doctors presence</div>
+                                    </div>
+                                </div>
                             </div>
+                            <a href="#">
+                                <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <a href="#">
-                        <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
+                    <div class="col-md-4">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3"> <i class="fa fa-wheelchair fa-5x"></i> </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">124</div>
+                                        <div>Registered patients</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row padding-top50">
-            <div class="col-md-12">
-                <div id='calendar'></div>
+                <div class="row padding-top50">
+                    <div class="col-md-12">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row padding-top50">
