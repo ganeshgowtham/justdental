@@ -1195,3 +1195,7 @@ fieldset[disabled] .btn-facebook.focus {
   background-color: #a264e7;
   border-color: #62309a;
 }
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
