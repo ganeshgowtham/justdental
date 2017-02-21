@@ -1200,6 +1200,10 @@ fieldset[disabled] .btn-facebook.focus {
     background-image: none
 }
 
+.container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 .social {
     position: relative;
