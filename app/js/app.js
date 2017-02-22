@@ -7,6 +7,7 @@ $(document).ready(function () {
     });
 });
 $(function () {
+
     Highcharts.chart('container', {
         title: {
             text: 'Clinical Data - By Numbers 2017'
@@ -42,16 +43,18 @@ $(function () {
             , borderWidth: 0
         }
         , series: [{
-            name: 'Clinics'
-            , data: [7, 6, 9, 14, 18, 21, 25, 26, 23, 18, 13, 9]
+            name: 'New Patients'
+            , data: [7, 6, 9, 14, 29, 49, 82, 126, 55, 70, 88, 102]
         }, {
-            name: 'Doctors'
-            , data: [1, 2, 5, 8, 13, 21, 25, 26, 23, 89, 90, 100]
+            name: 'Total Patients'
+            , data: [1, 22, 35, 48, 73, 91, 125, 166, 184, 200, 220, 250]
         }, {
-            name: 'Patients'
-            , data: [17, 26, 29, 34, 48, 51, 35, 56, 53, 78, 103, 110]
+            name: 'Corporate Patients'
+            , data: [1, 6, 29, 8, 48, 2, 35, 55, 53, 78, 90, 90]
         }]
     });
+
+
     
     Highcharts.chart('appointmentChart', {
         chart: {
