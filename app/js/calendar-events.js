@@ -17,51 +17,59 @@ $(function() {
 		navLinks: true,
 		events: [
 			{
-				title: 'Dr Baskar - Gowtham',
+				title: 'Ganesh,Gowtham - Dental Implants',
 				start: YM + '-01'
 			},
 			{
-				title: 'Dr Baskar - Root canal',
+				title: 'Ujjwal Kohli - Root canal',
 				start: YM + '-07',
-				end: YM + '-10'
+				end: YM + '-08'
 			},
 			{
 				id: 999,
-				title: 'Dr Suman - Genral Checkup',
+				title: 'Sumant - Genral Checkup',
 				start: YM + '-09T16:00:00'
 			},
 			{
 				id: 999,
-				title: 'Dr Rama - Crown Fixing',
+				title: 'Rama - Crown Fixing',
 				start: YM + '-16T16:00:00'
 			},
+            {
+                title: 'Santosh - Crown Fixing',
+                start: YM + '-16T10:00:00'
+            },
+            {
+                title: 'RAM (INFOSYS) (C) - Crown Fixing',
+                start: YM + '-16T12:00:00'
+            },
 			{
-				title: 'Dr Siva - Teeth Cavity removal',
+				title: 'Ujjwal (Series)- Teeth Cavity removal',
 				start: YESTERDAY,
 				end: TOMORROW
 			},
 			{
-				title: 'Dr Baskar - Chipped teeth fixing',
+				title: 'Ujjwal (Series)- Chipped teeth fixing',
 				start: YM + '-16',
 				end: YM + '-10'
 			},
 			{
-				title: 'Dr Rama - Hyperdontia',
+				title: 'Aashish - Hyperdontia',
 				start: YM + '-14',
 				end: YM + '-10'
 			},
 			{
-				title: 'Dr Sangeetha - Brace fixing',
+				title: 'Sudhindra - Brace fixing',
 				start: YM + '-21',
 				end: YM + '-10'
 			},
 			{
-				title: 'Dr Kumar - Gum issue',
+				title: 'Naidu A - Gum issue',
 				start: YM + '-28',
 				end: YM + '-10'
 			},
 			{
-				title: 'Dr Suresh - Clenching',
+				title: 'Mrs. Naidu S - Clenching',
 				start: YM + '-11',
 				end: YM + '-10'
 			}

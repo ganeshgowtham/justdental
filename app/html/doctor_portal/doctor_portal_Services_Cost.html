@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Just Dental</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../app/css/app.css" rel="stylesheet">
+    <link href="../../../app/css/highcharts.css" rel="stylesheet">
+    <!--<link href="../../../app/css/fullcalendar.css" rel="stylesheet">-->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+    <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+    <!--<script src='../../../app/js/fullcalendar.js'></script>-->
+
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+
+
+    <link href='https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css' rel='stylesheet' />
+    <script src='//code.jquery.com/jquery-1.12.4.js'></script>
+    <script src='https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js'></script>
+
+
+
+    <!--<script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src='../../js/calendar-events.js'></script>
+
+    <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/highcharts.js"></script>
+    <script src="../../js/exporting.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89613573-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script>
+
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script>
+    <style type="text/css">
+tr.group,
+tr.group:hover {
+    background-color: #ddd !important;
+}
+    </style>
+
+</head>
+
+
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  href="#"><img src="../../../app/images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="">JUST DENTAL </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#signup-modal"><span class="glyphicon glyphicon-user"></span> Dr. Ujjwal K</a></li>
+                        <!--<li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                    </ul><!--navbar-right close-->
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+<div class="container-fluid"> <!--<Left navigation>-->
+    <div class="col-sm-3 col-md-3">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-file text-primary">
+                            </span> My Dashboard</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-usd text-primary"></span>
+                                    <a href="#"> Sales</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-user text-primary"></span>
+                                    <a href="#"> Patients</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-tasks text-primary"></span>
+                                    <a href="#"> Products & Services</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-shopping-cart  text-primary"></span>
+                                    <a href="#"> Inventory (Cart)</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th text-primary">
+                            </span> Modules</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-qrcode text-primary"></span>
+                                    <a href="#"> Billing</a> <span class="label label-success">₹ 16,800</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-bell text-primary"></span>
+                                    <a href="#"> Invoices</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-shopping-cart text-primary"></span>
+                                    <a href="#"> Inventory</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-bell text-primary"></span>
+                                    <a href="#"> Reminders</a> <span class="label label-warning">2</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user text-primary">
+                            </span> My Clinic</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-edit text-primary"></span>
+                                    <a href="#"> Edit Clinic Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-trash text-danger"></span>
+                                    <a href="#"> Change Login/Password</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                    <a href="#"> Edit/Modify Services</a> <span class="label label-info">5</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-cloud-upload text-primary"></span>
+                                    <a href="#"> Import/Export</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            <span class="fa-lg text-primary"> <i class="fa fa-twitter"></i></span> JD Connect</a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-flash text-success"></span>
+                                    <a href="#"> News</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-file text-info"></span>
+                                    <a href="#"> JD Newsletters</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                    <a href="#"> Publications</a>
+                                    <span class="badge">2</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-comment text-success"></span>
+                                    <a href="#"> Notifications</a>
+                                    <span class="badge">42</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<div class="row padding-top50">-->
+    <div class="col-sm-9 col-md-9">
+
+        <div class="row padding-top10">
+            <div class="col-md-9">
+                <p>
+                    <button type = "button" class = "btn btn-success" data-toggle="modal" data-target="#myModal">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        Add New Services
+                    </button>
+
+                    <button type = "button" class = "btn btn-warning" data-toggle="modal" data-target="#myModal-import">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        Edit Services
+                    </button>
+
+                    <button type = "button" class = "btn btn-primary" data-toggle="modal" data-target="#myModal-import">
+                        <span class="glyphicon glyphicon-import"></span>
+                        Import Pricing Model
+                    </button>
+
+                    <button type = "button" class = "btn btn-info" data-toggle="modal" data-target="#myModal-export">
+                        <span class="glyphicon glyphicon-export"></span>
+                        Export All
+                    </button>
+
+                    <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add New Services</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label  class="col-sm-4 control-label"
+                                                for="inputNewPatientName">Service Name</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                   id="inputNewPatientName" placeholder="Service Name"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-4 control-label"
+                                                for="inputNewPatientEmail">Service Type</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                   id="inputNewPatientEmail" placeholder="Service Type"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-4 control-label"
+                                                for="inputNewPackage">Package Type</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                   id="inputNewPackage" placeholder="Package Type"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-4 control-label"
+                                                for="inputNewPrice">Costing</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                   id="inputNewPrice" placeholder="Costing"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="myModal-import" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Import</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Import Services data into JD Portal</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div id="myModal-export" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Export</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Export Services data from JD Portal</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </p>
+            </div>
+        </div>
+        <div class="row padding-top20">
+            <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">Filter by</span> <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#its_equal"><i class="fa fa-map-marker fa-1x"></i>     Clinic Id</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#less_than"><i class="fa fa-user fa-1x"></i>     Service Name</a></li>
+                        <li><a href="#less_than"><i class="fa fa-mobile fa-1x"></i>    Package Type</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control text-round" name="x" placeholder="Search Services..."> <span class="input-group-btn">
+                                <i  class="fa fa-search add-plus"></i>
+                            </span> </div>
+        </div><br>
+        <div class="row padding-top20">
+            <table id="example" class="table" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Platinum Category</th>
+                    <th>Gold Category</th>
+                    <th>Corporate</th>
+                    <th>Last Edited</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <h6><strong>Dental Implants</strong></h6>
+
+                    </td>
+                    <td>₹ 12000</td>
+                    <td>₹ 8800</td>
+                    <td>₹ 6200</td>
+                    <td>
+                        <var> <h6>Last Edited: 31 - Dec - 2016, By: Ujjwal (Admin)</h6></var>
+                    </td>
+                    <td>
+                        <span class="label label-info">
+                        <span class="glyphicon glyphicon-user"></span>
+                            Contact Support
+                        </span><br>
+                        <button type = "button" class="btn btn-primary btn-xs btn-warning" data-toggle="modal" data-target="#myModal-import">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6><strong>General checkup</strong></h6>
+
+                    </td>
+                    <td>₹ 1200</td>
+                    <td>₹ 880</td>
+                    <td>₹ 620</td>
+                    <td>
+                        <var> <h6>Last Edited: 31 - Dec - 2016, By: Ujjwal (Admin)</h6></var>
+                    </td>
+                    <td>
+                        <span class="label label-info">
+                        <span class="glyphicon glyphicon-user"></span>
+                            Contact Support
+                        </span><br>
+                        <button type = "button" class="btn btn-primary btn-xs btn-warning" data-toggle="modal" data-target="#myModal-import">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6><strong>Dental Procedure - 1</strong></h6>
+
+                    </td>
+                    <td>₹ 12000</td>
+                    <td>₹ 8800</td>
+                    <td>₹ 6200</td>
+                    <td>
+                        <var> <h6>Last Edited: 31 - Dec - 2016, By: Ujjwal (Admin)</h6></var>
+                    </td>
+                    <td>
+                        <span class="label label-info">
+                        <span class="glyphicon glyphicon-user"></span>
+                            Contact Support
+                        </span><br>
+                        <button type = "button" class="btn btn-primary btn-xs btn-warning" data-toggle="modal" data-target="#myModal-import">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
+

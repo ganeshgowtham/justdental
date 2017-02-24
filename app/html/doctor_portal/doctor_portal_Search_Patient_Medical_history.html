@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Just Dental</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../app/css/app.css" rel="stylesheet">
+    <link href="../../../app/css/highcharts.css" rel="stylesheet">
+    <!--<link href="../../../app/css/fullcalendar.css" rel="stylesheet">-->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+    <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+    <!--<script src='../../../app/js/fullcalendar.js'></script>-->
+
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+
+
+    <link href='https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css' rel='stylesheet' />
+    <script src='//code.jquery.com/jquery-1.12.4.js'></script>
+    <script src='https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js'></script>
+
+
+
+    <!--<script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src='../../js/calendar-events.js'></script>
+
+    <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/highcharts.js"></script>
+    <script src="../../js/exporting.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89613573-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script>
+
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script>
+    <style type="text/css">
+tr.group,
+tr.group:hover {
+    background-color: #ddd !important;
+}
+
+/* uses font awesome for social icons */
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+.page-header{
+  text-align: center;
+}
+
+/*social buttons*/
+.btn-social{
+  color: white;
+  opacity:0.9;
+}
+.btn-social:hover {
+  color: white;
+    opacity:1;
+}
+.btn-facebook {
+background-color: #3b5998;
+opacity:0.9;
+}
+.btn-twitter {
+background-color: #00aced;
+opacity:0.9;
+}
+.btn-linkedin {
+background-color:#0e76a8;
+opacity:0.9;
+}
+.btn-github{
+  background-color:#000000;
+  opacity:0.9;
+}
+.btn-google {
+  background-color: #c32f10;
+  opacity: 0.9;
+}
+.btn-stackoverflow{
+  background-color: #D38B28;
+  opacity: 0.9;
+}
+
+/* resume stuff */
+
+.bs-callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+.bs-callout:last-child {
+    margin-bottom: 0px;
+}
+.bs-callout h4 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4{
+    color: #d9534f;
+}
+
+.resume .list-group-item:first-child, .resume .list-group-item:last-child{
+  border-radius:0;
+}
+
+/*makes an anchor inactive(not clickable)*/
+.inactive-link {
+   pointer-events: none;
+   cursor: default;
+}
+
+.resume-heading .social-btns{
+  margin-top:15px;
+}
+.resume-heading .social-btns i.fa{
+  margin-left:-5px;
+}
+
+
+
+@media (max-width: 992px) {
+  .resume-heading .social-btn-holder{
+    padding:5px;
+  }
+}
+
+
+/* skill meter in resume. copy pasted from http://bootsnipp.com/snippets/featured/progress-bar-meter */
+
+.progress-bar {
+    text-align: left;
+	white-space: nowrap;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.progress-bar > .progress-type {
+	padding-left: 10px;
+}
+
+.progress-meter {
+	min-height: 15px;
+	border-bottom: 2px solid rgb(160, 160, 160);
+  margin-bottom: 15px;
+}
+
+.progress-meter > .meter {
+	position: relative;
+	float: left;
+	min-height: 15px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: rgb(160, 160, 160);
+}
+
+.progress-meter > .meter-left {
+	border-left-width: 2px;
+}
+
+.progress-meter > .meter-right {
+	float: right;
+	border-right-width: 2px;
+}
+
+.progress-meter > .meter-right:last-child {
+	border-left-width: 2px;
+}
+
+.progress-meter > .meter > .meter-text {
+	position: absolute;
+	display: inline-block;
+	bottom: -20px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: rgb(160, 160, 160);
+	text-align: left;
+}
+
+.progress-meter > .meter.meter-right > .meter-text {
+	text-align: right;
+}
+
+    </style>
+
+</head>
+
+
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  href="#"><img src="../../../app/images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="">JUST DENTAL </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#signup-modal"><span class="glyphicon glyphicon-user"></span> Dr. Ujjwal K</a></li>
+                        <!--<li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                    </ul><!--navbar-right close-->
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+<br><br><br><br>
+<div class="container-fluid"> <!--<Left navigation>-->
+       <!--<div class="row padding-top50">-->
+    <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="container">
+
+                <div class="resume">
+                    <header class="page-header">
+                        <h1 class="page-title">Medical history of Ujjwal Kohli</h1>
+                        <small> <i class="fa fa-clock-o"></i> Last Updated on: <time>Sunday, January 22, 2017</time></small>
+                    </header>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading resume-heading">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-xs-12 col-sm-4">
+                                                <figure>
+                                                    <img class="img-circle img-responsive" alt="" src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_1440,q_90,w_720/v1/355239/y4l5AGUT_evezky.jpg">
+                                                </figure>
+
+                                                <div class="row">
+                                                    <div class="col-xs-12 social-btns">
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-google">
+                                                                <i class="fa fa-google"></i> </a>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-facebook">
+                                                                <i class="fa fa-facebook"></i> </a>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-twitter">
+                                                                <i class="fa fa-twitter"></i> </a>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-linkedin">
+                                                                <i class="fa fa-linkedin"></i> </a>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-github">
+                                                                <i class="fa fa-github"></i> </a>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-md-1 col-lg-1 social-btn-holder">
+                                                            <a href="#" class="btn btn-social btn-block btn-stackoverflow">
+                                                                <i class="fa fa-stack-overflow"></i> </a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-8">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">Ujjwal Kohli</li>
+                                                    <li class="list-group-item">Software Engineer</li>
+                                                    <li class="list-group-item">Goldman Sachs </li>
+                                                    <li class="list-group-item"><i class="fa fa-phone"></i> 8088582691 </li>
+                                                    <li class="list-group-item"><i class="fa fa-envelope"></i> ujjwal.kohli@gmail.com</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bs-callout bs-callout-danger">
+                                    <h4>Overall Dental Summary</h4>
+                                    <p>
+                                        Som text here..........
+                                    </p>
+                                    <p>
+                                        Procedures done....
+
+                                    </p>
+                                </div>
+                                <div class="bs-callout bs-callout-danger">
+                                    <h4>Last Visit Notes</h4>
+                                    <p>
+                                        Last Visit Notes here.....
+                                    </p>
+                                </div>
+
+                                <div class="bs-callout bs-callout-danger">
+                                    <h4>Prior Visit Notes</h4>
+                                    <ul class="list-group">
+                                        <a class="list-group-item inactive-link" href="#">
+                                            <h4 class="list-group-item-heading">
+                                                Dental Implant Procedure at JD Whitefield by Dr. Sanotsh
+                                            </h4>
+                                            <p class="list-group-item-text">
+                                                Notes from Dr. Santosh here.....
+                                            </p>
+                                        </a>
+                                        <a class="list-group-item inactive-link" href="#">
+                                            <h4 class="list-group-item-heading">General Dental Checkup at JD Whitefield by Dr. Sanotsh
+                                            </h4>
+                                            <p class="list-group-item-text">
+                                                Notes from Dr.Sanotsh here....
+                                            </p><ul>
+                                            <li>
+                                                Next visit details here...
+                                            </li>
+                                            <li>
+                                                Further schedules here...
+                                            </li>
+                                        </ul>
+                                            <p></p>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class="bs-callout bs-callout-danger">
+                                    <h4>Medical Charts</h4>
+                                    <ul class="list-group">
+                                        <a class="list-group-item inactive-link" href="#">
+                                            <div class="progress">
+                                                <div data-placement="top" style="width: 80%;"
+                                                     aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar progress-bar-success">
+                                                    <span class="sr-only">80%</span>
+                                                    <span class="progress-type">Overall Dental Health </span>
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div data-placement="top" style="width: 70%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
+                                                    <span class="sr-only">70%</span>
+                                                    <span class="progress-type">Overall Dental Health </span>
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div data-placement="top" style="width: 70%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
+                                                    <span class="sr-only">70%</span>
+                                                    <span class="progress-type">Overall Dental Health  </span>
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div data-placement="top" style="width: 65%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-warning">
+                                                    <span class="sr-only">65%</span>
+                                                    <span class="progress-type">Overall Dental Health </span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </ul>
+                                </div>
+                                <div class="bs-callout bs-callout-danger">
+                                    <h4>Payments</h4>
+                                    <table class="table table-striped table-responsive ">
+                                        <thead>
+                                        <tr><th>JD Service</th>
+                                            <th>Date</th>
+                                            <th>Amount (INR)</th>
+                                        </tr></thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Dental Implants</td>
+                                            <td>31-Dec-2016</td>
+                                            <td> 12000 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>General Checkup</td>
+                                            <td>14-Jan-2017</td>
+                                            <td> 899 </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
+

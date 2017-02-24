@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Just Dental</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../app/css/app.css" rel="stylesheet">
+    <link href="../../../app/css/highcharts.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+    <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+    <script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89613573-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <style type="text/css">
+        @media screen and (min-width: 768px) {
+            .modal-dialog {
+                width: 75%;
+                /* New width for default modal */
+            }
+            .modal-sm {
+                width: 350px;
+                /* New width for small modal */
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .modal-lg {
+                width: 950px;
+                /* New width for large modal */
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="#"><img alt="Brand" src="../../../app/images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="">JUST DENTAL </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>   Appointments<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Book</a></li>
+                                <li><a href="#">Manage</a></li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wheelchair">   </i>   Patient<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Registration</a></li>
+                                <li><a href="#">Manage Patients</a></li>
+                                <li><a href="#">Diagonis</a></li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-stethoscope">   </i>       Doctor<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Register doctor</a></li>
+                                <li><a href="#">Manage doctor's calendar</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-inr">   </i>   Revenue</a></li>
+                        <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Clinical Supply</a></li>
+                        <li class=""><a data-toggle="modal" data-target="#addClinicModal" href=""><i class="fa fa-user">   </i>   Guest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<div class="main col-lg-12 myHalfCol">
+    <div class="col-lg-6">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-8">
+            <div class="well panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <img src="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_1440,q_90,w_720/v1/355239/y4l5AGUT_evezky.jpg" alt="" class="center-block img-circle img-thumbnail img-responsive">
+                            <ul class="list-inline ratings text-center" title="Ratings">
+                                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                            </ul>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-12 col-sm-8">
+                            <h2>Ujjwal Kohli</h2>
+                            <p><strong>Age: </strong> 29 </p>
+                            <p><strong>Sex: </strong> Male </p>
+                            <p><strong>Email: </strong> ujjwal.kohli@gmail.com </p>
+                            <p><strong>Phone: </strong> +91-8088582691 </p>
+                            <p><strong>Last Visit: </strong> 1st December, Just Dental Rajajinagar, Bengaluru </p>
+                            <p><strong>Next Visit: </strong> <span class="label label-success tags"><span class="glyphicon glyphicon-calendar"></span> Schedule Now</span> </p>
+
+                            <p><strong>My Doctors: </strong>
+                                <span class="label label-info tags">Dr. Santosh</span>
+                                <span class="label label-info tags">Dr. Sudhindra</span>
+                                <span class="label label-info tags">Dr. Naidu</span>
+                                <span class="label label-info tags">(Specialist) Dr. Hegde</span>
+                            </p>
+                        </div>
+                        <!--/col-->
+                        <div class="clearfix"></div>
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong> 20,7K </strong></h2>
+                            <p><small>Followers</small></p>
+                            <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong>245</strong></h2>
+                            <p><small>Following</small></p>
+                            <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong>43</strong></h2>
+                            <p><small>Snippets</small></p>
+                            <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/panel-body-->
+            </div>
+            <!--/panel-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+
+    </div>
+
+
+    <div class="col-lg-6">
+    <<!-- Form Name -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+
+                <legend>Additional Details</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label">Medical History</label>
+            <div class="col-md-4">
+                <input id="Medical History" name="Medical History" placeholder="Medical History" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+<br>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Previous Reports</label>
+            <div class="col-md-4">
+                <input id="Previous Reports" name="Previous Reports" placeholder="Previous Reports" class="form-control input-md" required="" type="text">
+            </div>
+        </div>
+
+
+    </div>
+        </div>
+    </div>
+    </div>

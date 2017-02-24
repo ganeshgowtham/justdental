@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Just Dental</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../app/css/app.css" rel="stylesheet">
+    <link href="../../../app/css/highcharts.css" rel="stylesheet">
+    <!--<link href="../../../app/css/fullcalendar.css" rel="stylesheet">-->
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' />
+    <link href='https://fullcalendar.io/css/base.css?3.1.0-1.5.0-2' rel='stylesheet' />
+    <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+    <!--<script src='../../../app/js/fullcalendar.js'></script>-->
+
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+    <!--<script src='https://fullcalendar.io/js/home.js?3.1.0-1.5.0-2'></script>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src='../../js/calendar-events.js'></script>
+
+    <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/highcharts.js"></script>
+    <script src="../../js/exporting.js"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89613573-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!--<style type="text/css">-->
+    <!--.logo {-->
+    <!--display:block;-->
+    <!--height:28px;-->
+    <!--}-->
+
+    <!--</style>-->
+
+</head>
+
+
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  href="#"><img src="../../../app/images/logo.png"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="">JUST DENTAL </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#signup-modal"><span class="glyphicon glyphicon-user"></span> Dr. Ujjwal K</a></li>
+                        <!--<li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                    </ul><!--navbar-right close-->
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+<div class="container"> <!--<Left navigation>-->
+    <div class="col-sm-3 col-md-3">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-file text-primary">
+                            </span> My Dashboard</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-usd text-primary"></span>
+                                    <a href="#"> Sales</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-user text-primary"></span>
+                                    <a href="#"> Patients</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-tasks text-primary"></span>
+                                    <a href="#"> Products & Services</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-shopping-cart  text-primary"></span>
+                                    <a href="#"> Inventory (Cart)</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th text-primary">
+                            </span> Modules</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-qrcode text-primary"></span>
+                                    <a href="#"> Billing</a> <span class="label label-success">₹ 16,800</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-bell text-primary"></span>
+                                    <a href="#"> Invoices</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-shopping-cart text-primary"></span>
+                                    <a href="#"> Inventory</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-bell text-primary"></span>
+                                    <a href="#"> Reminders</a> <span class="label label-warning">2</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user text-primary">
+                            </span> My Clinic</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-edit text-primary"></span>
+                                    <a href="#"> Edit Clinic Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-trash text-danger"></span>
+                                    <a href="#"> Change Login/Password</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                    <a href="#"> Edit/Modify Services</a> <span class="label label-info">5</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-cloud-upload text-primary"></span>
+                                    <a href="#"> Import/Export</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            <span class="fa-lg text-primary"> <i class="fa fa-twitter"></i></span> JD Connect</a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-flash text-success"></span>
+                                    <a href="#"> News</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-file text-info"></span>
+                                    <a href="#"> JD Newsletters</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-pencil text-primary"></span>
+                                    <a href="#"> Publications</a>
+                                    <span class="badge">2</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="glyphicon glyphicon-comment text-success"></span>
+                                    <a href="#"> Notifications</a>
+                                    <span class="badge">42</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<div class="row padding-top50">-->
+    <div class="col-sm-9 col-md-9">
+        <div class="container">
+            <div class="row padding-top10">
+                <div class="col-md-9">
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <i class="fa fa-info-circle text-primary"></i>
+                        Welcome Dr. Ujjwal K - (Whitefield Clinic), Have a good day. </div>
+                </div>
+            </div>
+
+
+            <div class="row padding-top10">
+                <div class="col-md-9">
+                    <p>
+                        <button type = "button" class = "btn btn-primary">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Search Patients
+                        </button>
+
+                        <button type = "button" class = "btn btn-success" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            Add New Patients
+                        </button>
+
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add New Patient</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label  class="col-sm-4 control-label"
+                                                        for="inputNewPatientName">Name</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control"
+                                                           id="inputNewPatientName" placeholder="Name"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label  class="col-sm-4 control-label"
+                                                        for="inputNewPatientEmail">Email</label>
+                                                <div class="col-sm-8">
+                                                    <input type="email" class="form-control"
+                                                           id="inputNewPatientEmail" placeholder="Email"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label  class="col-sm-4 control-label"
+                                                        for="inputNewPatientPhone">Phone</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control"
+                                                           id="inputNewPatientPhone" placeholder="Phone"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-default">Save</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+                    </p>
+
+                    <div class="alert alert-success alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                        <strong>Great!</strong> New Patient has been added successfully.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="appointmentChart" style="width:100%; height:300px;"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="patientChart" style="width:100%; height:300px;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3"> <i class="fa fa-calendar fa-5x"></i> </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>New appointments</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3"> <i class="fa fa-user-md fa-5x"></i> </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">89</div>
+                                    <div>Patients Attended</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3"> <i class="fa fa-wheelchair fa-5x"></i> </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">1.2K</div>
+                                    <div>Registered patients</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer"> <span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"> <i class="fa fa-bell fa-fw"></i> Data insight </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="container" style="width:100%; height:400px;"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <!--</div>-->
+
+    </div>
+
+</body>
+
+</html>
+
