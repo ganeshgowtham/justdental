@@ -346,11 +346,13 @@ legend {
 
 body {
     background: #fff;
+    font-family: "Roboto"
 }
 
 .navbar,
 .dropdown-menu {
-    background: #68a6d6;
+    #background: #68a6d6;
+    background: #ddd;
     border: none;
 }
 
@@ -842,7 +844,7 @@ body {
 
 .btn-social {
     position: relative;
-    padding-left: 44px;
+    #padding-left: 35px;
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
@@ -872,7 +874,7 @@ body {
 }
 
 .btn-social.btn-sm {
-    padding-left: 38px
+    #padding-left: 38px
 }
 
 .btn-social.btn-sm>:first-child {
@@ -893,7 +895,7 @@ body {
 
 .btn-social-icon {
     position: relative;
-    padding-left: 44px;
+    #padding-left: 44px;
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
@@ -1201,15 +1203,15 @@ fieldset[disabled] .btn-facebook.focus {
 }
 
 .container-fluid {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .social {
     position: relative;
     height: 3em;
     width: 13.5em;
-    margin: 60px 150px;
+    margin: 60px 100px;
 }
 
 .social-text {
